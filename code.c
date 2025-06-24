@@ -23,7 +23,6 @@ void clearInput() {
 void pause() { 
     printf("\nTekan Enter..."); 
     clearInput(); 
-    getchar(); 
 }
 
 int validateId(const char *id) {
