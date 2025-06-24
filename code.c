@@ -5,13 +5,12 @@
 #include <conio.h>
 
 #define ID_LENGTH 6
-#define NAME_LENGTH 25
 #define FILENAME "components.dat"
 #define PAGE_SIZE 20
 
 typedef struct {
     char id[ID_LENGTH + 1];
-    char name[NAME_LENGTH + 1];
+    char name[26];
     int stock;
     float price;
 } Component;
@@ -278,7 +277,7 @@ void displayComponents(int showIndex) {
         printf("%-8s %-25s %-8d %-10.2f\n", components[i].id, components[i].name, components[i].stock, components[i].price);
 
         if ((i + 1) % PAGE_SIZE == 0 && i < count - 1) {
-            printf("\n--- Enter untuk lanjut ---");
+            printf("\n--- Enter untuk lanjut ---\n");
             getchar();
         }
     }
